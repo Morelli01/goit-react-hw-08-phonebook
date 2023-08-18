@@ -1,25 +1,29 @@
-import styles from './filter.module.css';
-import propTypes from 'prop-types';
-import SearchIcon from '@mui/icons-material/Search';
+import { useDispatch, useSelector } from 'react-redux';
+import { FcSearch } from 'react-icons/fc';
+import { selectContacts, selectFilter } from 'redux/selectors';
+import { setFilter } from 'redux/filterSlice';
+import { InputStyles, Title } from './Filter.styled';
 
-const Filter = ({ filter, onChange }) => {
-  return (
-    <label className={styles.label}>
-      <span className={styles.span}>Find contacts by name:</span>
-      <SearchIcon className={styles.icon} />
-      <input
-        className={styles.input}
-        type="text"
-        name="filter"
-        value={filter}
-        onChange={onChange}
-      />
-    </label>
+function Filter() {
+  const dispatch = useDispatch();
+  const filter = useSelector(selectFilter);
+
+  const handleFilterChange = event => {
+    dispatch(setFilter(event.target.value.trim()));
+  };
+
+  return useSelector(selectContacts).length < 1 ? (
+    <Title>Add your first contact</Title>
+  ) : (
+    <InputStyles
+      type="text"
+      name="filter"
+      placeholder="Search by name"
+      value={filter}
+      onChange={handleFilterChange}
+      prefix={<FcSearch />}
+    />
   );
-};
+}
 
-Filter.propTypes = {
-  filter: propTypes.string.isRequired,
-  onChange: propTypes.func.isRequired,
-};
 export default Filter;

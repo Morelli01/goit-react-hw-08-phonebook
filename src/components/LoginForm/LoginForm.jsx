@@ -1,46 +1,83 @@
-import styles from './login-form.module.css';
-import fields from './fields';
-import initialState from './initialState';
-import useForm from '../../shared/hooks/useForm';
-import Button from '../../shared/component/Button/Button';
-import TextField from '../../shared/component/TextField/TextField';
-import usePassword from '../../shared/hooks/usePassword';
-import { Link } from 'react-router-dom';
-import { FaLock } from 'react-icons/fa';
-import { AiTwotoneMail } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+import { Form, Input, Button, Checkbox } from 'antd';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
-const LoginForm = ({ onSubmit }) => {
-  const { state, handleChange, handleSubmit } = useForm({
-    initialState,
-    onSubmit,
-  });
-  const { email, password } = state;
-  const { showPassword, handleShowClick } = usePassword();
+import { logIn } from 'redux/auth/auth-operations';
+
+const LoginForm = () => {
+  const dispatch = useDispatch();
+
+  const onFinish = values => {
+    dispatch(logIn(values));
+  };
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   const { email, password } = e.target.elements;
+  //   if (email.value.trim() === '' || password.value.trim() === '') {
+  //     return toast.error('Please fill in all fields');
+  //   }
+  //   dispatch(logIn({ email: email.value, password: password.value }));
+  //   e.target.reset();
+  // };
 
   return (
-    <div className={styles.wrap}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <AiTwotoneMail className={styles.iconMail} />
-        <TextField value={email} onChange={handleChange} {...fields.email} />
-        <FaLock className={styles.iconPass} />
-        <TextField
-          value={password}
-          onChange={handleChange}
-          {...fields.password}
-          type={showPassword ? 'text' : 'password'}
+    <Form
+      name="normal_login"
+      className="login-form"
+      initialValues={{
+        remember: false,
+      }}
+      onFinish={onFinish}
+    >
+      <Form.Item
+        name="email"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your Email!',
+          },
+        ]}
+      >
+        <Input
+          prefix={<UserOutlined className="site-form-item-icon" />}
+          placeholder="Email"
         />
-        <Button>Log in</Button>
-      </form>
-      <button onClick={handleShowClick} className={styles.btn}>
-        {showPassword ? 'hide' : 'show'}
-      </button>
-      <p className={styles.text}>
-        New to us?{' '}
-        <Link className={styles.link} to="/register">
-          Sign Up
-        </Link>
-      </p>
-    </div>
+      </Form.Item>
+      <Form.Item
+        name="password"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your Password!',
+          },
+        ]}
+      >
+        <Input
+          prefix={<LockOutlined className="site-form-item-icon" />}
+          type="password"
+          placeholder="Password"
+        />
+      </Form.Item>
+      <Form.Item>
+        <Form.Item name="remember" valuePropName="checked" noStyle>
+          <Checkbox>Remember me</Checkbox>
+        </Form.Item>
+      </Form.Item>
+
+      <Form.Item>
+        <Button type="primary" htmlType="submit" className="login-form-button">
+          Log in
+        </Button>
+      </Form.Item>
+    </Form>
+
+    // <Form onSubmit={handleSubmit} autoComplete="off">
+    //   <Text>Email</Text>
+    //   <Input type="email" name="email" placeholder="Enter email" />
+    //   <Text>Password</Text>
+    //   <Input type="password" name="password" placeholder="Enter password" />
+    //   <Button type="submit">Log In</Button>
+    // </Form>
   );
 };
 
