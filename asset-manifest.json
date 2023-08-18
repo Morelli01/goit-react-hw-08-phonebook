@@ -1,13 +1,38 @@
 {
   "files": {
-    "main.css": "/Morelli01/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/main.07d3183d.js",
+    "main.css": "/Morelli01/goit-react-hw-08-phonebook/static/css/main.8c863da5.css",
+    "main.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/main.540d8b7a.js",
+    "static/js/415.fa494fc9.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/415.fa494fc9.chunk.js",
+    "static/js/236.f3562c7f.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/236.f3562c7f.chunk.js",
+    "static/js/924.2db91fe5.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/924.2db91fe5.chunk.js",
+    "static/js/730.919cd4e4.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/730.919cd4e4.chunk.js",
+    "static/js/947.88cfdebb.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/947.88cfdebb.chunk.js",
+    "static/js/211.f945e3dc.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/211.f945e3dc.chunk.js",
+    "static/js/728.b30945e3.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/728.b30945e3.chunk.js",
+    "static/js/186.1bf165df.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/186.1bf165df.chunk.js",
+    "static/js/744.ac08dad8.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/744.ac08dad8.chunk.js",
+    "static/js/929.46807dcb.chunk.js": "/Morelli01/goit-react-hw-08-phonebook/static/js/929.46807dcb.chunk.js",
+    "static/media/default-avatar.png": "/Morelli01/goit-react-hw-08-phonebook/static/media/default-avatar.e582e4ba7aae2cecd658.png",
+    "static/media/minus-user.svg": "/Morelli01/goit-react-hw-08-phonebook/static/media/minus-user.feeedd48bf4c9cc7a13aebfda7d97e34.svg",
+    "static/media/logout.svg": "/Morelli01/goit-react-hw-08-phonebook/static/media/logout.912bd64471c055c2d66f5ee642ea95bc.svg",
+    "static/media/plus-user.svg": "/Morelli01/goit-react-hw-08-phonebook/static/media/plus-user.51073a3c740e6767b5f839df208c0220.svg",
     "index.html": "/Morelli01/goit-react-hw-08-phonebook/index.html",
-    "main.7acaea2f.css.map": "/Morelli01/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/main.07d3183d.js.map"
+    "static/media/edit-profile.svg": "/Morelli01/goit-react-hw-08-phonebook/static/media/edit-profile.24e54382545dcc7091e8b80fdbe2d424.svg",
+    "main.8c863da5.css.map": "/Morelli01/goit-react-hw-08-phonebook/static/css/main.8c863da5.css.map",
+    "main.540d8b7a.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/main.540d8b7a.js.map",
+    "415.fa494fc9.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/415.fa494fc9.chunk.js.map",
+    "236.f3562c7f.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/236.f3562c7f.chunk.js.map",
+    "924.2db91fe5.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/924.2db91fe5.chunk.js.map",
+    "730.919cd4e4.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/730.919cd4e4.chunk.js.map",
+    "947.88cfdebb.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/947.88cfdebb.chunk.js.map",
+    "211.f945e3dc.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/211.f945e3dc.chunk.js.map",
+    "728.b30945e3.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/728.b30945e3.chunk.js.map",
+    "186.1bf165df.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/186.1bf165df.chunk.js.map",
+    "744.ac08dad8.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/744.ac08dad8.chunk.js.map",
+    "929.46807dcb.chunk.js.map": "/Morelli01/goit-react-hw-08-phonebook/static/js/929.46807dcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.8c863da5.css",
+    "static/js/main.540d8b7a.js"
   ]
 }
